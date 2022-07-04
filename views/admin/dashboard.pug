@@ -59,7 +59,7 @@ html(lang='en')
             .d-block
               h2.h5.mb-3 Hi, Jane
               |           
-              a.btn.btn-secondary.btn-sm.d-inline-flex.align-items-center(href='/pages/examples/sign-in.html')
+              a.btn.btn-secondary.btn-sm.d-inline-flex.align-items-center(href='/login')
                 svg.icon.icon-xxs.me-1(fill='none', stroke='currentColor', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
                   path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1')
                 |             Sign Out
@@ -78,7 +78,7 @@ html(lang='en')
               span.mt-1.ms-1.sidebar-text Volt Overview
           |       
           li.nav-item.active
-            a.nav-link(href='/pages/dashboard/dashboard.html')
+            a.nav-link(href='/admin/dashboard')
               span.sidebar-icon
                 svg.icon.icon-xs.me-2(fill='currentColor', viewBox='0 0 20 20', xmlns='http://www.w3.org/2000/svg')
                   path(d='M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z')
@@ -100,7 +100,7 @@ html(lang='en')
                 span.badge.badge-sm.bg-secondary.ms-1.text-gray-800 Pro
           |       
           li.nav-item
-            a.nav-link(href='/pages/transactions.html')
+            a.nav-link(href='/admin/transactions')
               span.sidebar-icon
                 svg.icon.icon-xs.me-2(fill='currentColor', viewBox='0 0 20 20', xmlns='http://www.w3.org/2000/svg')
                   path(d='M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z')
@@ -178,31 +178,31 @@ html(lang='en')
             #submenu-pages.multi-level.collapse(role='list', aria-expanded='false')
               ul.flex-column.nav
                 li.nav-item
-                  a.nav-link(href='/pages/examples/sign-in.html')
+                  a.nav-link(href='/login')
                     span.sidebar-text Sign In
                 |             
                 li.nav-item
-                  a.nav-link(href='/pages/examples/sign-up.html')
+                  a.nav-link(href='/sign-up.html')
                     span.sidebar-text Sign Up
                 |             
                 li.nav-item
-                  a.nav-link(href='/pages/examples/forgot-password.html')
+                  a.nav-link(href='/forgot-password.html')
                     span.sidebar-text Forgot password
                 |             
                 li.nav-item
-                  a.nav-link(href='/pages/examples/reset-password.html')
+                  a.nav-link(href='/reset-password.html')
                     span.sidebar-text Reset password
                 |             
                 li.nav-item
-                  a.nav-link(href='/pages/examples/lock.html')
+                  a.nav-link(href='/lock.html')
                     span.sidebar-text Lock
                 |             
                 li.nav-item
-                  a.nav-link(href='/pages/examples/404.html')
+                  a.nav-link(href='/404.html')
                     span.sidebar-text 404 Not Found
                 |             
                 li.nav-item
-                  a.nav-link(href='/pages/examples/500.html')
+                  a.nav-link(href='/500.html')
                     span.sidebar-text 500 Not Found
           |       
           li.nav-item
