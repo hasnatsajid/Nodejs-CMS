@@ -5,6 +5,8 @@ const path = require('path');
 
 const app = express();
 
+const loginRoutes = require('./routes/login');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -22,9 +24,7 @@ app.use('/', (req, res, next) => {
   next();
 });
 
-app.use('/login', (req, res, next) => {
-  res.render('login', { title: 'Hey', message: 'Hello hasnat!' });
-});
+app.use('/login', loginRoutes);
 
 // Routes
 app.use('/', router);
