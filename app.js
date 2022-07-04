@@ -1,11 +1,11 @@
 const express = require('express');
-const router = require('./routes');
 const dotenv = require('dotenv').config();
 const path = require('path');
 
 const app = express();
 
-const loginRoutes = require('./routes/login');
+const defaultRoutes = require('./routes/defaultRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -24,10 +24,9 @@ app.use('/', (req, res, next) => {
   next();
 });
 
-app.use('/login', loginRoutes);
-
 // Routes
-app.use('/', router);
+app.use('/', defaultRoutes);
+app.use('/admin', adminRoutes);
 
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Server started on port: ${process.env.PORT || 3001}`);
