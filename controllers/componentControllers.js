@@ -15,6 +15,14 @@ module.exports = {
     res.render('components/modals');
   },
 
+  tables: (req, res) => {
+    res.render('components/tables');
+  },
+
+  typography: (req, res) => {
+    res.render('components/typography');
+  },
+
   //   transactions: (req, res) => {
   //     res.render('admin/transactions');
   //   },
