@@ -1,10 +1,10 @@
 module.exports = {
   index: (req, res) => {
-    res.render('index', { title: 'Hey', message: 'Hello hasnat!' });
+    res.render('/index.html');
   },
 
   login: (req, res) => {
-    res.render('login');
+    res.render('/login.html');
   },
 
   register: (req, res) => {

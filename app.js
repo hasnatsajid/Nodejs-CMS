@@ -8,21 +8,11 @@ const defaultRoutes = require('./routes/defaultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const componentRoutes = require('./routes/componentRoutes');
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
 
-app.use('/', (req, res, next) => {
-  console.log('route 2');
-
-  next();
-});
-
-app.use('/', (req, res, next) => {
-  // res.render('index', { title: 'Hey', message: 'Hello hasnat!' });
-
-  next();
+app.use('/', (req, res) => {
+  res.sendFile('/index.html');
 });
 
 // Routes
