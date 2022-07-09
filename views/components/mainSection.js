@@ -287,7 +287,7 @@ const mainSection = `<main>
         </a>
       </div>
       <div class="col-6 mb-5">
-        <a href="/pages/settings.html" class="page-preview scale-up-2">
+        <a href="/settings" class="page-preview scale-up-2">
           <img class="shadow-lg rounded scale" src="/assets/img/pages/settings.jpg" alt="Settings page preview" />
           <div class="text-center show-on-hover rounded-bottom">
             <h6 class="m-0 text-center d-inline-flex align-items-center text-white">

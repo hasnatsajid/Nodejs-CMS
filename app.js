@@ -18,14 +18,14 @@ app.use(express.static(path.resolve(__dirname, 'views')));
 //   next();
 // });
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '/index.html'));
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'views/dashboard.html'));
+// });
 
 // Routes
 // app.use('/', defaultRoutes);
-// app.use('/admin', adminRoutes);
-// app.use('/component', componentRoutes);
+app.use('/', adminRoutes);
+app.use('/', componentRoutes);
 
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Server started on port: ${process.env.PORT || 3001}`);

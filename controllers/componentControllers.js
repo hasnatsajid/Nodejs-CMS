@@ -1,26 +1,28 @@
+const path = require('path');
+
 module.exports = {
   buttons: (req, res) => {
-    res.render('components/buttons');
+    res.sendFile(path.resolve(__dirname, '../views/components/buttons.html'));
   },
 
   notifications: (req, res) => {
-    res.render('components/notifications');
+    res.sendFile(path.resolve(__dirname, '../views/components/notifications.html'));
   },
 
   forms: (req, res) => {
-    res.render('components/forms');
+    res.sendFile(path.resolve(__dirname, '../views/components/forms.html'));
   },
 
   modals: (req, res) => {
-    res.render('components/modals');
+    res.sendFile(path.resolve(__dirname, '../views/components/modals.html'));
   },
 
   tables: (req, res) => {
-    res.render('components/tables');
+    res.sendFile(path.resolve(__dirname, '../views/components/tables.html'));
   },
 
   typography: (req, res) => {
-    res.render('components/typography');
+    res.sendFile(path.resolve(__dirname, '../views/components/typography.html'));
   },
 
   //   transactions: (req, res) => {

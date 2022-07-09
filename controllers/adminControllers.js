@@ -1,14 +1,15 @@
+const path = require('path');
+
 module.exports = {
   dashboard: (req, res) => {
-    // res.sendFile('/admin/dashboard.html');
-    res.send('dashboard');
+    res.sendFile(path.resolve(__dirname, '../views/dashboard.html'));
   },
 
   transactions: (req, res) => {
-    res.render('admin/transactions');
+    res.sendFile(path.resolve(__dirname, '../views/transactions.html'));
   },
 
   settings: (req, res) => {
-    res.render('admin/settings');
+    res.sendFile(path.resolve(__dirname, '../views/settings.html'));
   },
 };
