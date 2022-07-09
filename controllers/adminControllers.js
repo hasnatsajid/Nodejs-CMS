@@ -1,6 +1,7 @@
 module.exports = {
   dashboard: (req, res) => {
-    res.render('admin/dashboard');
+    // res.sendFile('/admin/dashboard.html');
+    res.send('dashboard');
   },
 
   transactions: (req, res) => {

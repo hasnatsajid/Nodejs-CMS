@@ -25,7 +25,7 @@ var headerHtml = `<header class="header-global">
       </div>
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         <li class="nav-item me-2">
-          <a href="/pages/dashboard/dashboard.html" class="nav-link">Dashboard</a>
+          <a href="/admin/dashboard" class="nav-link">Dashboard</a>
         </li>
         <li class="nav-item me-2">
           <a href="/pages/examples/sign-in.html" class="nav-link">Login</a>
@@ -54,6 +54,4 @@ var headerHtml = `<header class="header-global">
 </nav>
 </header>`;
 
-window.addEventListener('load', (event) => {
-  document.getElementById('header').innerHTML = headerHtml;
-});
+document.getElementById('header').innerHTML = headerHtml;

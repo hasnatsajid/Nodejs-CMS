@@ -7,18 +7,25 @@ const app = express();
 const defaultRoutes = require('./routes/defaultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const componentRoutes = require('./routes/componentRoutes');
+const { send } = require('process');
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'views')));
 
-app.use('/', (req, res) => {
-  res.sendFile('/index.html');
+// app.use('/', (req, res, next) => {
+//   res.sendFile('/index.html');
+
+//   next();
+// });
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '/index.html'));
 });
 
 // Routes
-app.use('/', defaultRoutes);
-app.use('/admin', adminRoutes);
-app.use('/component', componentRoutes);
+// app.use('/', defaultRoutes);
+// app.use('/admin', adminRoutes);
+// app.use('/component', componentRoutes);
 
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Server started on port: ${process.env.PORT || 3001}`);
