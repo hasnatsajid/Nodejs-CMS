@@ -2,28 +2,22 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 const path = require('path');
 
+const { engine } = require('express-handlebars');
+
 const app = express();
 
 const defaultRoutes = require('./routes/defaultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const componentRoutes = require('./routes/componentRoutes');
-const { send } = require('process');
 
-app.use(express.static(path.resolve(__dirname, 'public')));
-app.use(express.static(path.resolve(__dirname, 'views')));
+// Setting handlebars as view template engine
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
 
-// app.use('/', (req, res, next) => {
-//   res.sendFile('/index.html');
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
 
-//   next();
-// });
-
-// app.get('/', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'views/dashboard.html'));
-// });
-
-// Routes
-// app.use('/', defaultRoutes);
 app.use('/', adminRoutes);
 app.use('/', componentRoutes);
 

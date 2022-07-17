@@ -5,7 +5,7 @@ var headerHtml = `<header class="header-global">
       <div class="navbar-collapse-header">
         <div class="row">
           <div class="col-6 collapse-brand">
-            <a href="/index.html">
+            <a href="/">
               <img src="/assets/img/brand/light.svg" alt="Volt logo" />
             </a>
           </div>

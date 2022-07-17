@@ -1124,7 +1124,7 @@ const mainSection = `<main>
             </ul>
           </div>
           <a
-            href="https://demo.themesberg.com/volt-pro/index.html"
+            href="https://demo.themesberg.com/volt-pro/"
             target="_blank"
             class="btn btn-secondary d-flex align-items-center justify-content-center mb-0 mt-2"
             >Demo Volt Pro
