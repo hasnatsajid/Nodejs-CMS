@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 // Controllers
-const controllers = require('../controllers/adminControllers');
+const { dashboard, transactions, settings } = require('../controllers/adminControllers');
 
-router.route('/').get(controllers.dashboard);
-router.route('/settings').get(controllers.settings);
-router.route('/transactions').get(controllers.transactions);
+router.route('/').get(dashboard);
+router.route('/settings').get(settings);
+router.route('/transactions').get(transactions);
 
 module.exports = router;

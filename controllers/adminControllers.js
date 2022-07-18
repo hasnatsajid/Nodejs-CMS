@@ -6,10 +6,10 @@ module.exports = {
   },
 
   transactions: (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/transactions.html'));
+    res.sendFile(path.join(__dirname, '..', 'views/transactions.html'));
   },
 
   settings: (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/settings.html'));
+    res.sendFile(path.join(__dirname, '..', 'views/settings.html'));
   },
 };
