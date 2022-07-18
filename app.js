@@ -8,8 +8,6 @@ const defaultRoutes = require('./routes/defaultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const componentRoutes = require('./routes/componentRoutes');
 
-// Setting handlebars as view template engine
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
